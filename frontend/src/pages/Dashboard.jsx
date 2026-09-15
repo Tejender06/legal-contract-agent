@@ -1,6 +1,6 @@
 export default function Dashboard() {
   return (
-    <div>
+    <div className="card">
       <h2>User Dashboard</h2>
       <p>Uploaded contracts and risk analysis will appear here.</p>
     </div>

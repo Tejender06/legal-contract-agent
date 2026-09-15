@@ -1,16 +1,17 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import UploadScreen from './pages/UploadScreen';
+import './index.css'; // This connects your new styles!
 
 function App() {
   return (
     <BrowserRouter>
-      <nav style={{ padding: '10px', borderBottom: '1px solid #ccc' }}>
-        <Link to="/" style={{ marginRight: '15px' }}>Dashboard</Link>
-        <Link to="/upload">Upload Contract</Link>
+      <nav className="navbar">
+        <Link to="/" className="nav-link">Dashboard</Link>
+        <Link to="/upload" className="nav-link">Upload Contract</Link>
       </nav>
       
-      <div style={{ padding: '20px' }}>
+      <div className="page-container">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/upload" element={<UploadScreen />} />
