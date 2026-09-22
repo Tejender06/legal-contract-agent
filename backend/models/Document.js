@@ -7,22 +7,28 @@ const documentSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-
     title: {
       type: String,
       required: true,
       trim: true,
     },
-
     fileName: {
       type: String,
       required: true,
     },
-
     filePath: {
       type: String,
+      required: true,
     },
-
+    fileType: {
+      type: String,
+      enum: ["pdf", "docx", "txt"],
+      required: true,
+    },
+    fileSize: {
+      type: Number,
+      required: true,
+    },
     status: {
       type: String,
       enum: ["uploaded", "processing", "completed", "failed"],
